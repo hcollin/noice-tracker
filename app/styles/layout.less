@@ -1,0 +1,54 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+
+    & > .layout-header {
+        flex: 0 0 auto;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    & > .layout-content {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+
+        display: flex;
+        flex-direction: row;
+
+        overflow: hidden;
+
+        & > .layout-content-left {
+            flex: 0 0 auto;
+            width: 180px;
+
+            overflow: hidden;
+        }
+
+        & > .layout-content-main {
+            flex: 1 1 auto;
+
+            overflow: hidden;
+        }
+
+        & > .layout-content-right {
+            flex: 0 0 auto;
+            width: 120px;
+
+            overflow: hidden;
+        }
+    }
+
+    & > .layout-footer {
+        flex: 0 0 auto;
+        height: 48px;
+
+        overflow: hidden;
+    }
+
+    .layout-hide {
+        display: none;
+    }
+}

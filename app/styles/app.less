@@ -1,0 +1,21 @@
+@import "variables.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: repeating-linear-gradient(@mainBgColor 0px, lighten(@mainBgColor, 20) 3px, darken(@mainBgColor, 20) 4px, @mainBgColor 6px);
+    color: @textColor;
+    font-family: @mainFontFamily;
+    font-size: @rootFontSize;
+}
+
+// Default layout structure, no theme
+@import "layout.less";
+@import "elements.less";
+
+// All component styles are here
+@import "components/components.less";
