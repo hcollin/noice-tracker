@@ -9,7 +9,8 @@ export default function channelReducer(state={}, action) {
                         playing: false,
                         effects: [],
                         gain: 0.5,
-                        channelType: action.channelType
+                        channelType: action.channelType,
+                        options: action.options !== undefined ? action.options : {}
                     }
             ]);
         case "CHANNEL_REMOVE":

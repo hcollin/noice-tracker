@@ -1,11 +1,26 @@
 import React from 'react';
 
-export default class Channel extends React.Component {
-    render() {
-        return (
-            <div className="mixer-channel">
-                <p>{this.props.channel.name}</p>
-            </div>
-        );
+import ChannelButton from './ChannelButton';
+
+
+const Channel = ({channel}) => (
+     <div className="mixer-channel">
+            <p>{channel.name}</p>
+        </div>
+);
+
+
+
+const mapStateToProps = state => {
+  return { channels: state.channels };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onCreateChannel: () => {
+        dispatch(channelCreate());
     }
-}
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Mixer)

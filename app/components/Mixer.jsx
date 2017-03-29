@@ -21,8 +21,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onCreateChannel: () => {
-        let action = channelCreate();
-        dispatch(action);
+        dispatch(channelCreate());
     }
   };
 };
